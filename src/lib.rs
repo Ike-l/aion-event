@@ -1,10 +1,20 @@
-
+pub mod event_system;
+pub mod event;
+pub mod event_buffer;
 
 pub mod prelude {
-    #[derive(Hash, PartialEq, Eq)]
-    pub struct Event;
-
-    // double buffer
-    pub struct CurrentEvents;
-    pub struct NextEvents;
+    pub use super::{
+        event::{
+            Event,
+            event_id::{
+                EventId
+            }
+        },
+        event_system::{
+            EventSystem
+        },
+        event_buffer::{
+            EventBuffer
+        }
+    };
 }
