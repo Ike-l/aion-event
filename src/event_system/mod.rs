@@ -5,5 +5,9 @@ use aion_program::prelude::ProgramRegistry;
 use crate::prelude::EventBuffer;
 
 pub trait EventSystem {
-    fn execute(program_registry: &Arc<ProgramRegistry>, current_events: &EventBuffer) -> EventBuffer;
+    fn execute(
+        program_registry: &Arc<ProgramRegistry>, 
+        current_events: &EventBuffer,
+        event_histry: &EventBuffer,
+    ) -> EventBuffer;
 }
