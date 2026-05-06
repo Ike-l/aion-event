@@ -17,4 +17,8 @@ impl EventBuffer {
     pub fn extend(&mut self, other: impl Iterator<Item = Event>) {
         self.events.extend(other);
     }
+
+    pub fn contains(&self, event: &Event) -> bool {
+        self.events.contains(event)
+    }
 }
