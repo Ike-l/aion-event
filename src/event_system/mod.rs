@@ -2,12 +2,12 @@ use std::sync::Arc;
 
 use aion_program::prelude::ProgramRegistry;
 
-use crate::prelude::EventBuffer;
+use crate::prelude::{EventBuffer, EventHistory};
 
 pub trait EventSystem {
     fn execute(
         program_registry: &Arc<ProgramRegistry>, 
         current_events: &EventBuffer,
-        event_histry: &EventBuffer,
+        event_histry: &EventHistory,
     ) -> EventBuffer;
 }

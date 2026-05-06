@@ -1,6 +1,7 @@
 pub mod event_system;
 pub mod event;
 pub mod event_buffer;
+pub mod event_history;
 
 pub mod prelude {
     pub use super::{
@@ -15,6 +16,9 @@ pub mod prelude {
         },
         event_buffer::{
             EventBuffer
+        },
+        event_history::{
+            EventHistory
         }
     };
 }
