@@ -14,7 +14,7 @@ impl EventBuffer {
         Self { events }
     }
 
-    pub fn merge(&mut self, other: impl Iterator<Item = Event>) {
+    pub fn extend(&mut self, other: impl Iterator<Item = Event>) {
         self.events.extend(other);
     }
 }
