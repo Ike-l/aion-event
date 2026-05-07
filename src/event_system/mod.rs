@@ -8,6 +8,6 @@ pub trait EventSystem {
     fn execute(
         program_registry: &Arc<ProgramRegistry>, 
         current_events: &EventBuffer,
-        event_histry: &EventHistory,
+        event_history: &EventHistory,
     ) -> EventBuffer;
 }
