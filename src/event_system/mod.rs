@@ -6,6 +6,7 @@ use crate::prelude::{EventBuffer, EventHistory};
 
 pub trait EventSystem {
     fn execute(
+        &self,
         program_registry: &Arc<ProgramRegistry>, 
         current_events: &EventBuffer,
         event_history: &EventHistory,
